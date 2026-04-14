@@ -1,0 +1,166 @@
+
+<h2 class="sr-only">100 popular gym exercises with primary and secondary muscle groups</h2>
+<div style="padding: 1rem 0;">
+<div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1rem;">
+  <input type="text" id="search" placeholder="Search exercises..." style="flex: 1; min-width: 200px;" oninput="filterTable()">
+  <select id="muscle-filter" onchange="filterTable()" style="min-width: 160px;">
+    <option value="">All muscle groups</option>
+  </select>
+</div>
+<div style="overflow-x: auto;">
+<table id="exercise-table" style="width: 100%; border-collapse: collapse; font-size: 14px; table-layout: fixed;">
+  <colgroup>
+    <col style="width: 5%">
+    <col style="width: 28%">
+    <col style="width: 22%">
+    <col style="width: 45%">
+  </colgroup>
+  <thead>
+    <tr style="border-bottom: 1px solid var(--color-border-tertiary);">
+      <th style="padding: 8px 6px; text-align: left; font-size: 12px; color: var(--color-text-secondary); font-weight: 500;">#</th>
+      <th style="padding: 8px 6px; text-align: left; font-size: 12px; color: var(--color-text-secondary); font-weight: 500;">Exercise</th>
+      <th style="padding: 8px 6px; text-align: left; font-size: 12px; color: var(--color-text-secondary); font-weight: 500;">Primary muscle</th>
+      <th style="padding: 8px 6px; text-align: left; font-size: 12px; color: var(--color-text-secondary); font-weight: 500;">Secondary muscles</th>
+    </tr>
+  </thead>
+  <tbody id="table-body"></tbody>
+</table>
+</div>
+<p id="count" style="font-size: 12px; color: var(--color-text-secondary); margin-top: 8px;"></p>
+</div>
+<script>
+const exercises = [
+  ["Barbell Back Squat","Quadriceps","Glutes, Hamstrings, Core, Lower back"],
+  ["Barbell Front Squat","Quadriceps","Glutes, Core, Upper back"],
+  ["Barbell Deadlift","Hamstrings","Glutes, Lower back, Traps, Core"],
+  ["Romanian Deadlift","Hamstrings","Glutes, Lower back, Core"],
+  ["Sumo Deadlift","Hamstrings","Glutes, Adductors, Lower back"],
+  ["Barbell Bench Press","Chest","Shoulders, Triceps"],
+  ["Incline Barbell Bench Press","Upper chest","Shoulders, Triceps"],
+  ["Decline Barbell Bench Press","Lower chest","Shoulders, Triceps"],
+  ["Dumbbell Bench Press","Chest","Shoulders, Triceps"],
+  ["Incline Dumbbell Press","Upper chest","Shoulders, Triceps"],
+  ["Dumbbell Flye","Chest","Shoulders, Biceps"],
+  ["Cable Flye","Chest","Shoulders, Triceps"],
+  ["Push-Up","Chest","Shoulders, Triceps, Core"],
+  ["Dips","Chest / Triceps","Shoulders, Core"],
+  ["Pull-Up","Lats","Biceps, Rear delts, Core"],
+  ["Chin-Up","Lats","Biceps, Core"],
+  ["Lat Pulldown","Lats","Biceps, Rear delts"],
+  ["Seated Cable Row","Mid back","Lats, Biceps, Rear delts"],
+  ["Bent-Over Barbell Row","Mid back","Lats, Biceps, Lower back"],
+  ["Dumbbell Single-Arm Row","Lats","Mid back, Biceps"],
+  ["T-Bar Row","Mid back","Lats, Biceps, Rear delts"],
+  ["Chest-Supported Row","Mid back","Lats, Rear delts, Biceps"],
+  ["Face Pull","Rear delts","Rotator cuff, Traps"],
+  ["Shrugs","Traps","Upper back"],
+  ["Barbell Overhead Press","Shoulders","Triceps, Upper chest, Core"],
+  ["Dumbbell Shoulder Press","Shoulders","Triceps, Upper chest"],
+  ["Arnold Press","Shoulders","Triceps, Upper chest"],
+  ["Lateral Raise","Lateral delts","Traps"],
+  ["Front Raise","Front delts","Shoulders"],
+  ["Reverse Pec Deck","Rear delts","Mid back, Rotator cuff"],
+  ["Upright Row","Traps","Lateral delts, Biceps"],
+  ["Barbell Curl","Biceps","Forearms, Brachialis"],
+  ["Dumbbell Curl","Biceps","Forearms, Brachialis"],
+  ["Hammer Curl","Brachialis","Biceps, Forearms"],
+  ["Preacher Curl","Biceps","Forearms"],
+  ["Concentration Curl","Biceps","Forearms"],
+  ["Cable Curl","Biceps","Forearms"],
+  ["Incline Dumbbell Curl","Biceps","Forearms, Brachialis"],
+  ["Skull Crusher","Triceps","Shoulders"],
+  ["Tricep Pushdown","Triceps","Forearms"],
+  ["Overhead Tricep Extension","Triceps","Shoulders"],
+  ["Close-Grip Bench Press","Triceps","Chest, Shoulders"],
+  ["Diamond Push-Up","Triceps","Chest, Shoulders"],
+  ["Leg Press","Quadriceps","Glutes, Hamstrings"],
+  ["Hack Squat","Quadriceps","Glutes, Hamstrings"],
+  ["Leg Extension","Quadriceps","None significant"],
+  ["Leg Curl","Hamstrings","Calves, Glutes"],
+  ["Seated Leg Curl","Hamstrings","Calves"],
+  ["Good Morning","Hamstrings","Lower back, Glutes"],
+  ["Hip Thrust","Glutes","Hamstrings, Core"],
+  ["Glute Bridge","Glutes","Hamstrings, Core"],
+  ["Cable Kickback","Glutes","Hamstrings"],
+  ["Bulgarian Split Squat","Quadriceps","Glutes, Hamstrings, Core"],
+  ["Lunges","Quadriceps","Glutes, Hamstrings, Core"],
+  ["Walking Lunges","Quadriceps","Glutes, Hamstrings, Core"],
+  ["Step-Ups","Quadriceps","Glutes, Hamstrings"],
+  ["Box Jump","Quadriceps","Glutes, Hamstrings, Calves"],
+  ["Standing Calf Raise","Calves","Soleus"],
+  ["Seated Calf Raise","Soleus","Calves"],
+  ["Donkey Calf Raise","Calves","Soleus"],
+  ["Plank","Core","Shoulders, Glutes"],
+  ["Ab Wheel Rollout","Core","Shoulders, Lats"],
+  ["Cable Crunch","Core","Hip flexors"],
+  ["Hanging Leg Raise","Core","Hip flexors"],
+  ["Russian Twist","Obliques","Core"],
+  ["Bicycle Crunch","Obliques","Core"],
+  ["Crunch","Core","Hip flexors"],
+  ["Decline Crunch","Core","Hip flexors"],
+  ["Side Plank","Obliques","Core, Glutes"],
+  ["Landmine Press","Shoulders","Chest, Triceps, Core"],
+  ["Landmine Row","Mid back","Lats, Biceps"],
+  ["Farmer's Carry","Traps","Forearms, Core, Legs"],
+  ["Trap Bar Deadlift","Hamstrings","Quadriceps, Glutes, Traps"],
+  ["Power Clean","Full body","Traps, Shoulders, Hamstrings"],
+  ["Kettlebell Swing","Glutes","Hamstrings, Core, Shoulders"],
+  ["Kettlebell Goblet Squat","Quadriceps","Glutes, Core"],
+  ["Dumbbell Row","Lats","Mid back, Biceps"],
+  ["Seated Dumbbell Press","Shoulders","Triceps, Upper chest"],
+  ["Machine Chest Press","Chest","Shoulders, Triceps"],
+  ["Machine Shoulder Press","Shoulders","Triceps"],
+  ["Machine Row","Mid back","Lats, Biceps"],
+  ["Pec Deck","Chest","Shoulders"],
+  ["Leg Adduction Machine","Adductors","Glutes"],
+  ["Leg Abduction Machine","Abductors","Glutes"],
+  ["Smith Machine Squat","Quadriceps","Glutes, Hamstrings"],
+  ["Smith Machine Bench Press","Chest","Shoulders, Triceps"],
+  ["Cable Lateral Raise","Lateral delts","Traps"],
+  ["Cable Row (single arm)","Mid back","Lats, Biceps, Core"],
+  ["Straight-Arm Pulldown","Lats","Core, Shoulders"],
+  ["Serratus Crunch","Serratus anterior","Core, Chest"],
+  ["Wrist Curl","Forearms","None significant"],
+  ["Reverse Wrist Curl","Forearms","None significant"],
+  ["Nordic Hamstring Curl","Hamstrings","Glutes, Core"],
+  ["Hyperextension","Lower back","Glutes, Hamstrings"],
+  ["Back Extension","Lower back","Glutes, Hamstrings"],
+  ["Pallof Press","Core","Shoulders, Chest"],
+  ["Dumbbell Pullover","Lats","Chest, Triceps"],
+  ["Incline Hammer Curl","Brachialis","Biceps, Forearms"],
+  ["Zottman Curl","Forearms","Biceps, Brachialis"],
+  ["Deficit Deadlift","Hamstrings","Glutes, Lower back"],
+];
+
+const primarySet = [...new Set(exercises.map(e => e[1]))].sort();
+const sel = document.getElementById('muscle-filter');
+primarySet.forEach(m => {
+  const opt = document.createElement('option');
+  opt.value = m; opt.textContent = m;
+  sel.appendChild(opt);
+});
+
+function renderRows(data) {
+  const tbody = document.getElementById('table-body');
+  tbody.innerHTML = data.map((e, i) => `
+    <tr style="border-bottom: 0.5px solid var(--color-border-tertiary);">
+      <td style="padding: 8px 6px; color: var(--color-text-secondary); font-size: 12px;">${i+1}</td>
+      <td style="padding: 8px 6px; font-weight: 500; color: var(--color-text-primary);">${e[0]}</td>
+      <td style="padding: 8px 6px; color: var(--color-text-primary);">${e[1]}</td>
+      <td style="padding: 8px 6px; color: var(--color-text-secondary); font-size: 13px;">${e[2]}</td>
+    </tr>`).join('');
+  document.getElementById('count').textContent = `${data.length} exercises`;
+}
+
+function filterTable() {
+  const q = document.getElementById('search').value.toLowerCase();
+  const m = document.getElementById('muscle-filter').value;
+  const filtered = exercises.filter(e =>
+    (!q || e[0].toLowerCase().includes(q) || e[1].toLowerCase().includes(q) || e[2].toLowerCase().includes(q)) &&
+    (!m || e[1] === m)
+  );
+  renderRows(filtered);
+}
+
+renderRows(exercises);
+</script>
