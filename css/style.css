@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Bubbles&display=swap');
 
 :root {
-        --orange-accent: #b24225;
+        --cream-nav-accent: #fee3c9;
+        --blue-nav-accent: #1F2937;
+        --orange-nav-accent: #b24225;
         --cream-accent: #fee3c9;
         --blue-accent: #1F2937;
+        --orange-accent: #b24225;
     }
 
 * {
@@ -19,6 +22,9 @@ body {
 header {
     display: flex;
     background-color: var(--orange-accent);
+    position: fixed;
+    width: 100%;
+
 }
 
 .top-nav {
@@ -60,8 +66,8 @@ header {
     top: 95px;
     right: -250px; /* this makes the menu hidden off to the right of the screen */
     width: 250px;
-    height: 600px;
-    background-color: var(--blue-accent);
+    height: 100%;
+    background-color: var(--cream-nav-accent);
     padding: 60px 20px 20px;
 
     /* This creates the slide in animation */
@@ -70,15 +76,14 @@ header {
 
 .nav-menu a {
     text-decoration: none;
-    color: var(--cream-accent);
+    color: var(--blue-nav-accent);
     font-family: Roboto, sans-serif;
     font-size: 25px;
 
 }
 
 .nav-menu li {
-    justify-content: center;
-    border-bottom: 2px solid var(--orange-accent);
+    border-bottom: 2px solid var(--orange-nav-accent);
 
 }
 
@@ -89,7 +94,7 @@ header {
     display: block; /* makes the span bars */
     width: 30px;
     height: 4px;
-    background: var(--cream-accent); /* color of the bars */
+    background: var(--cream-nav-accent); /* color of the bars */
     margin: 5px 0;
 }
 .hamburger-btn {
@@ -104,6 +109,10 @@ header {
 
     /* makes it slide into view */
     right: 0; 
+}
+
+.nav-menu a.active {
+    color: var(--orange-nav-accent);
 }
 
 /* THIS IS THE MENU BUTTON (X) ANIMATION CODE */
@@ -126,6 +135,57 @@ header {
 /* This adds the transition to the spans so it animates */
 .hamburger-btn span {
     transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+section {
+    background-color: var(--blue-accent);
+    height: 1000px;
+    font-size: 100px;
+    padding-top: 100px;
+}
+
+
+
+
+
+/* BOTTOM MOBILE NAVIGATION */
+.mobile-nav{
+    display: flex;
+    background-color: var(--orange-nav-accent);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.mobile-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cream-nav-accent);
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+}
+
+/* Have to add "active" to each html page link. only can have 
+active once on each page. */
+.mobile-nav a.active {
+    color: var(--blue-nav-accent);
+}
+
+.mobile-nav img {
+     width: 75px;
+     height: 75px;
+}
+.nav-btn {
+    border-right: 1.5px solid var(--blue-nav-accent);
+    border-left: 1.5px solid var(--blue-nav-accent);
+    flex: 1;
 }
 
 
