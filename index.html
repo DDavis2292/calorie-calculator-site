@@ -4,25 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="top-nav">
             <div class="nav-wrapper">
-                <a href="./"><img src="./images/husky-boy-logo.svg" alt="Husky Boy Health logo"></a>
-                <a href="./"><img src="./images/husky-boy-wordmark.svg" alt="Husky Boy Health logo"></a>
-                <div class="hamburger">
-                    <ul>
-                        <li>Dashboard</li>
-                        <li>Calorie Calculator</li>
-                        <li>Food Log</li>
-                        <li>Activity Log</li>
-                        <li>Recipes</li>
-                        <li>About</li>
-                    </ul>
-                </div>
+
+            <!-- Logo -->
+                <a href="./" class="logo-link">
+                    <img class="logo" src="./images/husky-boy-logo.svg" width="100%" alt="Husky Boy Health logo">
+                </a>
+
+            <!-- Wordmark -->
+                <a href="./" class="wordmark-link">
+                    <img class="wordmark" src="./images/husky-boy-wordmark.svg" width="100%" alt="Husky Boy Health logo">
+                </a>
+                
+            <!-- Hamburger Menu -->
+                <button class="hamburger-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
+            <!-- Menu for the Hamburger menu (separate from nav-wrapper) -->
+            <ul class="nav-menu">
+                <li><a href="./">Dashboard</a></li>
+                <li><a href="./calculator.html">Calorie Calculator</a></li>
+                <li><a href="./food-log.html">Food Log</a></li>
+                <li><a href="./activity-log.html">Activity Log</a></li>
+                <li><a href="./recipes.html">Recipes</a></li>
+                <li><a href="./about.html">About</a></li>
+            </ul>
         </nav>
     </header>
 

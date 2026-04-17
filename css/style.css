@@ -1,5 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Bubbles&display=swap');
+
 :root {
         --orange-accent: #b24225;
         --cream-accent: #fee3c9;
-        --teal-accent: #006664;
+        --blue-accent: #1F2937;
     }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Sitewide Navigation */
+
+
+
+header {
+    display: flex;
+    background-color: var(--orange-accent);
+}
+
+.top-nav {
+    width: 100%;
+    padding: 15px 10px 10px 10px;
+}
+.nav-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.logo {
+    max-width: 60px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.wordmark {
+    max-width: 225px;
+    height: auto;
+    align-self: flex-end;
+}
+
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+/* This is the bars for the hamburger menu */
+
+.hamburger-btn span {
+    
+    display: block; /* makes the span bars */
+    width: 30px;
+    height: 4px;
+    background: var(--cream-accent); /* color of the bars */
+    margin: 5px 0;
+}
+.hamburger-btn {
+    /* Removes the button background color & border */
+    background: none;
+    border: none;
+    padding-right: 10px;
+
+}
