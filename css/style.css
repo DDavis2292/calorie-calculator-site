@@ -16,6 +16,9 @@
 }
 body {
     overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 /* Sitewide Navigation */
 
@@ -83,7 +86,7 @@ header {
 }
 
 .nav-menu li {
-    border-bottom: 2px solid var(--orange-nav-accent);
+    border-bottom: 2px solid var(--blue-nav-accent);
 
 }
 
@@ -115,6 +118,10 @@ header {
     color: var(--orange-nav-accent);
 }
 
+.nav-menu li.active {
+    border-bottom: 2px solid var(--orange-nav-accent);
+}
+
 /* THIS IS THE MENU BUTTON (X) ANIMATION CODE */
 
 /* This roatates the top bar down for X */
@@ -144,6 +151,20 @@ section {
     padding-top: 100px;
 }
 
+main {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    background-color: var(--blue-accent);
+    flex: 1;
+    width: 100%;
+}
+
+/* CALCULATOR.HTML STYLE */
+
+
+
+
+
 
 
 
@@ -156,9 +177,10 @@ section {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 70px;
     justify-content: space-around;
     align-items: center;
+    padding: 0 0;
     
 }
 
@@ -169,18 +191,19 @@ section {
     text-decoration: none;
     color: var(--cream-nav-accent);
     font-family: Roboto, sans-serif;
-    font-weight: bold;
+    font-size: 14px; 
 }
 
 /* Have to add "active" to each html page link. only can have 
 active once on each page. */
 .mobile-nav a.active {
     color: var(--blue-nav-accent);
+    font-weight: 1000;
 }
 
 .mobile-nav img {
-     width: 75px;
-     height: 75px;
+     width: 40px;
+     height: 40px;
 }
 .nav-btn {
     border-right: 1.5px solid var(--blue-nav-accent);

@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Log</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <header>
+        <nav class="top-nav">
+            <div class="nav-wrapper">
+
+            <!-- Logo -->
+                <a href="./" class="logo-link">
+                    <img class="logo" src="./images/husky-boy-logo.svg" width="100%" alt="Husky Boy Health logo">
+                </a>
+
+            <!-- Wordmark -->
+                <a href="./" class="wordmark-link">
+                    <img class="wordmark" src="./images/husky-boy-wordmark.svg" width="100%" alt="Husky Boy Health logo">
+                </a>
+                
+            <!-- Hamburger Menu -->
+                <button class="hamburger-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <!-- Menu for the Hamburger menu (separate from nav-wrapper) -->
+            <ul class="nav-menu">
+                <li><a href="./">Dashboard</a></li>
+                <li><a href="./calculator.html">Calorie Calculator</a></li>
+                <li class="active"><a href="./food-log.html" class="active">Food Log</a></li>
+                <li><a href="./activity-log.html">Activity Log</a></li>
+                <li><a href="./recipes.html">Recipes</a></li>
+                <li><a href="./about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
 
     <main>
 
@@ -136,6 +172,48 @@
                 </div>
             </div>
         </section>  
-    </main>    
+    </main> 
+    
+
+
+
+    <!-- BOTTOM MOBILE NAV -->
+    <footer>
+        <nav class="mobile-nav">
+            <div class="dashboard-btn nav-btn">
+                <a href="./" >
+                    <img src="./images/nav-dash-btn.svg" alt="">
+                    <span class="nav-text">Dashboard</span>
+                </a>
+            </div>
+
+            <div class="calculator-btn nav-btn">
+                <a href="./calculator.html">
+                    <img src="./images/nav-calculator-btn.svg" alt="">
+                    <span class="nav-text">Calculator</span>
+                </a>
+            </div>
+
+            <div class="food-btn nav-btn ">
+                <a href="./food-log.html" class="active">
+                    <img src="./images/nav-food-btn-active.svg" alt="">
+                    <span class="nav-text">Food Log</span>
+                </a>
+            </div>
+
+            <div class="activity-btn nav-btn ">
+                <a href="./activity-log.html">
+                    <img src="./images/nav-activity-btn.svg" alt="">
+                    <span class="nav-text">Activity Log</span>
+                </a>
+            </div>
+        </nav>
+    </footer>
+    
+
+<script src="./js/main.js"></script>
+
+
+
 </body>
 </html>
