@@ -11,9 +11,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    overflow-x: hidden;
+}
 /* Sitewide Navigation */
-
-
 
 header {
     display: flex;
@@ -46,9 +47,39 @@ header {
 }
 
 .nav-menu {
-    display: none;
+    /* this is only display flex, because of animation 
+    from the right (otherwise it would be "none") */
+    display: flex;
     flex-direction: column;
     list-style-type: none;
+    gap: 25px;
+   
+
+    /* Use this for animation for the menu */
+    position: fixed; /* makes it stay in place when scrolling */
+    top: 95px;
+    right: -250px; /* this makes the menu hidden off to the right of the screen */
+    width: 250px;
+    height: 600px;
+    background-color: var(--blue-accent);
+    padding: 60px 20px 20px;
+
+    /* This creates the slide in animation */
+    transition: right 0.3s ease;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--cream-accent);
+    font-family: Roboto, sans-serif;
+    font-size: 25px;
+
+}
+
+.nav-menu li {
+    justify-content: center;
+    border-bottom: 2px solid var(--orange-accent);
+
 }
 
 /* This is the bars for the hamburger menu */
@@ -66,5 +97,36 @@ header {
     background: none;
     border: none;
     padding-right: 10px;
-
 }
+
+.nav-menu.open {
+    display: flex;
+
+    /* makes it slide into view */
+    right: 0; 
+}
+
+/* THIS IS THE MENU BUTTON (X) ANIMATION CODE */
+
+/* This roatates the top bar down for X */
+.hamburger-btn.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+/* This will hide the middle bar */
+.hamburger-btn.open span:nth-child(2) {
+    opacity: 0;
+}
+
+/* This rotates the bottom bar up for X */
+.hamburger-btn.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* This adds the transition to the spans so it animates */
+.hamburger-btn span {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+
