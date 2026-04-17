@@ -48,31 +48,40 @@
             <h2>Calorie Calculator</h2>
             <p>Calculate your daily calories and macro nutrients</p>
         </div>
-        <form>
+        <form class="form-card">
             <div class="form-group">
                 <label for="age" >AGE</label>
-                <input type="number" id="age" placeholder="Enter your age">
+                <div class="age-input">
+                    <input type="number" id="age" placeholder="Enter your age">
+                </div>
             </div>
-            <div class="formgroup">
+            <div class="form-group">
                 <label for="sex">SEX</label>
                 <div class="radio-group">
-                    <input type="radio" id="male" name="sex" value="male">
-                    <label for="male">Male</label>
-
-                    <input type="radio" id="female" name="sex" value="female">
-                    <label for="male">Female</label>
+                    <div class="radio-option">
+                        <input type="radio" id="male" name="sex" value="male">
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="female" name="sex" value="female">
+                        <label for="male">Female</label>
+                    </div>
                 </div>
             </div>
             <div class="form-group">
                 <label>HEIGHT</label>
-            </div>
-            <div class="height-input">
-                <input type="number" id="feet" placeholder="ft">
-                <input type="number" id="inches" placeholder="in">
+            
+                <div class="height-input">
+                    <input type="number" id="feet" placeholder="ft">
+                    <input type="number" id="inches" placeholder="in">
+                </div>
             </div>
             <div class="form-group">
                 <label>WEIGHT</label>
-                <input type="number" id="weight" placeholder="lbs">
+
+                <div class="weight-input">
+                    <input type="number" id="weight" placeholder="lbs">
+                </div>
             </div>
             <div class="form-group">
                 <label>ACTIVITY LEVEL</label>
@@ -102,13 +111,13 @@
                 </select>
             </div>
 
-            <button type="submit">CALCULATE MY CALORIES</button> 
+            <button class="calculate" type="submit">CALCULATE MY CALORIES</button> 
         </form>
         <div class="exercise-info">
             <ul>
-                <li><strong>Exercise: </strong>15-30 minutes of elevated heart rate activity.</li>
-                <li><strong>Intense exercise: </strong>45-120 minutes of elevated heart rate activity.</li>
-                <li><strong>Very intense exercise: </strong>2+ hours of elevated heart rate activity</li>
+                <li><strong><u>Exercise</u></strong>: 15-30 minutes of elevated heart rate activity.</li>
+                <li><strong><u>Intense exercise</u></strong>: 45-120 minutes of elevated heart rate activity.</li>
+                <li><strong><u>Very intense exercise</u></strong>: 2+ hours of elevated heart rate activity</li>
             </ul>
         </div>
     </main>
