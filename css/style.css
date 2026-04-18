@@ -235,7 +235,6 @@ input::placeholder {
 }
 
 
-
 .height-input {
     display: flex;
     gap: 10px;
@@ -272,6 +271,70 @@ input::placeholder {
     font-family: Roboto, sans-serif;
     font-weight: 300;
 }
+
+/* FOOD-LOG.HTML STYLE */
+
+
+/* I used this to create the ring portion of the progress ring */
+.progress-ring {
+    width: 55vw;
+    max-width: 220px;
+    transform: rotate(90deg);
+}
+
+.ring-track {
+    fill: none;
+    stroke: var(--input-black);
+    stroke-width: 10;
+}
+
+.ring-progress {
+    fill: none;
+    stroke: #4caf50;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 251;
+    stroke-dashoffset: 60;
+}
+
+
+/* I used this portion to create the center of the ring */
+.ring-container {
+    position: relative;
+    display: inline-block;
+}
+
+.ring-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* ^ */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--cream-accent);
+    font-family: Roboto, sans-serif;
+}
+
+.calories-consumed {
+    font-size: 32px;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+.calories-left {
+    font-size: 20px;
+    font-weight: 600;
+    color: #b24225;
+}
+
+.ring-label {
+    padding: 5px 0;
+}
+
+
 
 
 /* BOTTOM MOBILE NAVIGATION */
