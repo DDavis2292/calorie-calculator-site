@@ -9,6 +9,7 @@
         --orange-accent: #b24225;
         --card-black: #2d2d2d;
         --input-black: #1e1e1e;
+        --teal-accent: #006664;
 
     }
 
@@ -202,7 +203,172 @@ main {
     font-size: 20px;
 }
 
-/* CALCULATOR.HTML STYLE */
+/* START: SECTION HERO */
+
+section .hero {
+    
+    background-color: #1F2937;
+    color: #F9FaF8;
+    padding: 0 100px;
+}
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 900;
+    padding-bottom: 10px;
+}
+
+
+
+.hero-text > p {
+    font-size: 18px;
+    color: #E5E7EB;
+    list-style-type: none;
+
+}
+
+.hero-text > button {
+    background-color: var(--orange-accent);
+    border: none;
+    border-radius: 5px;
+    margin-top: 8px;
+    padding: 3px 15px;
+    font-family: Roboto, sans-serif;
+    color: white;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    gap: 50px;
+    
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px ;
+    height: auto;
+}
+
+.hero-image, .hero-text {
+    flex: 1;
+}
+
+/* END: SECTION HERO */
+
+
+/* START: MAIN CONTENT AREA  */
+
+
+/* INFO SECTION  */
+
+.info {
+    background-color: whitesmoke;
+}
+.info-title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1F2937;
+    text-align: center;
+    padding: 30px;
+}
+
+.links-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 30px;
+}
+
+.links {
+    font-size: 12px;
+    text-align: center;
+    max-width: 150px;
+    
+}
+.links img {
+    width: 100%;
+    display: block;
+    border: 2px solid var(--orange-accent);
+    border-radius: 12px;
+}
+
+/* The next two styles are for the text overlay on the link images */
+
+.links a {
+    position: relative;
+    display: block;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* QUOTE SECTION */
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cream-accent);   
+    padding: 75px 150px;
+    gap: 20px;
+}
+
+.quote-text {
+    font-size: 20px;
+    font-weight: 300;
+    color: #1F2937;
+}
+
+.author {
+    align-self: flex-end;
+    padding-right: 10px;
+}
+
+/* AD SECTION */
+
+.ad-section {
+    
+    display: flex;
+    padding: 50px 100px;
+    justify-content: center;
+    background-color: whitesmoke;
+
+
+}
+
+.ad {
+    display: flex;
+    background-color: var(--teal-accent);
+    border-radius: 8px;
+    padding: 30px 60px;
+    gap: 100px;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.ad button {
+    background-color: var(--orange-accent);
+    border: 1.5px solid white;
+    border-radius: 5px;
+    padding: 7px 15px;
+    font-family: Roboto, sans-serif;
+    color: white;
+}
+
+
+
+
+/* START CALCULATOR.HTML STYLE */
 
 .form-card {
     display: flex;

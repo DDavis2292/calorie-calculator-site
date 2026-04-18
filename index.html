@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+
+    
 </head>
 <body>
     <header>
@@ -30,9 +32,11 @@
             </div>
             <!-- Menu for the Hamburger menu (separate from nav-wrapper) -->
             <ul class="nav-menu">
-                <li class="active"><a href="./" class="active">Dashboard</a></li>
+                
+                <li class="active"><a href="./home.html" class="active">Home</a></li>
+                <li><a href="./">Dashboard</a></li>
                 <li><a href="./calculator.html">Calorie Calculator</a></li>
-                <li><a href="./food-log.html">Food Log</a></li>
+                <li"><a href="./food-log.html">Food Log</a></li>
                 <li><a href="./activity-log.html">Activity Log</a></li>
                 <li><a href="./recipes.html">Recipes</a></li>
                 <li><a href="./about.html">About</a></li>
@@ -40,25 +44,90 @@
         </nav>
     </header>
 
-    <section class="content">
-        <p>Hey</p>
-        <br>
-        <br>
-        <br>
-        <p>HEY</p>
+    <main class="main-content">
+        
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Gear Built for the Grind</h1>
+                <p>Premium athletic wear designed for those who refuse to settle. Whether you're crushing your workout or dominating your day, Husky Boy delivers unmatched comfort and durability when it matters most.
+</p>
+                <button>Shop Now</button>
+            </div>
+            <div class="hero-image">
+                <img src="./images/LOGOS-04.png" alt="Husky boy athletics word mark with cream background and burnt orange lettering">
+            </div>
+        </section>
 
-    </section>
+        
+        <section class="info">
+            <div class="info-title">What's Missing From Your Collection?</div>
 
+            <div class="links-wrapper">
+                <div class="links new">
+                    <a href="#">
+                        <img src="./images/new-thumnail-02.png" alt="Image of a pair of gym shorts with Husky Boy logo">
+                        <div class="overlay-text">NEW ARRIVALS</div>
+                    </a>
+                    <div class="new-text">Be first to rock all of the newest Husky Boy products!</div>
+                </div>
+
+                <div class="links shoes">
+                    <a href="#">
+                        <img src="./images/shoes-thumnail-01.png" alt="Image of shoes the the Husky Boy logo">
+                        <div class="overlay-text">SHOES</div>
+                    </a>
+                    <div class="shoes-text">Don't miss out on all of our newest shoes styles. </div>
+                </div>
+
+                <div class="links apparel">
+                    <a href="#">
+                        <img src="./images/apparel-thumnail.png" alt="Man wearing a t-shirt branded with the Husky Boy Logo">
+                        <div class="overlay-text">APPAREL</div>
+                    </a>
+                    <div class="apparel-text">Shop the best clothes in the athletic industry!</div>
+                </div>
+
+                <div class="links accessories">
+                    <a href="#">
+                        <img src="./images/accesseries-thumnail-04.png" alt="Image of a water bottle branded with the Husky Boy logo">
+                        <div class="overlay-text">ACCESSORIES</div>
+                    </a>
+                    <div class="accessories-text">Get your hands on all the newest accessories from your favorite brand.</div>
+                </div>
+            </div>    
+        </section>
+
+        <section class="quote">
+            <div class="quote-text">Husky Boy is more than gear; it’s a mindset for those who refuse to be overlooked. We’ve combined raw durability with ultimate comfort to support your daily grind. This isn’t just a brand—it’s a movement. Don't get left behind. Live Husky.</div>
+            <div class="author">- Beloved Husky Boy Owner and CEO</div>
+        </section>
+
+        <section class="ad-section">
+            <div class="ad">
+                <div class="ad-text">
+                    <h3>You Are Worthy</h3>
+                    <p>Join the team & get all the latest product drops and discounts you deserve!</p>
+                </div>
+                <div class="ad-button">
+                    <button>SIGN UP</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+
+    <!-- BOTTOM MOBILE NAV -->
     <footer>
         <nav class="mobile-nav">
             <div class="dashboard-btn nav-btn">
-                <a href="./" class="active">
-                    <img src="./images/nav-dash-btn-active.svg" alt="">
+                <a href="./" >
+                    <img src="./images/nav-dash-btn.svg" alt="">
                     <span class="nav-text">Dashboard</span>
                 </a>
             </div>
 
-            <div class="calculator-btn nav-btn ">
+            <div class="calculator-btn nav-btn">
                 <a href="./calculator.html">
                     <img src="./images/nav-calculator-btn.svg" alt="">
                     <span class="nav-text">Calculator</span>
@@ -82,9 +151,9 @@
     </footer>
     
 
-<script src="./js/main.js">
+<script src="./js/main.js"></script>
 
-</script>
+
 
 </body>
 </html>
