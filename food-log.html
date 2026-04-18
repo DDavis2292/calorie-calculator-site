@@ -53,58 +53,68 @@
                 <p>Log your daily food intake</p>
         </div>
 
-        <div class="budget-card">
+        <div class="budget-card card">
             <p class="budget-label">Calorie Budget</p>
             <p class="budget-total">2,500 </p>
 
-    <!-- CALORIE BUDGET RING -->
+                     <!-- CALORIE BUDGET RING -->
+            <div class="ring-meal">
+                
+                <div class="ring-container">
+                    <svg viewBox="0 0 100 100" class="progress-ring">
+                        <circle class="ring-track" cx="50" cy="50" r="40"/>
+                        <circle class="ring-progress" cx="50" cy="50" r="40"/>
+                    </svg>
+                    <div class="ring-center">
+                        <span class="calories-consumed">1,900</span>
+                        <span class="ring-label">Left</span>
+                        <span class="calories-left">600</span>
+                    </div>
+                </div>
 
-            <div class="ring-container">
-                <svg viewBox="0 0 100 100" class="progress-ring">
-                    <circle class="ring-track" cx="50" cy="50" r="40"/>
-                    <circle class="ring-progress" cx="50" cy="50" r="40"/>
-                </svg>
-                <div class="ring-center">
-                    <span class="calories-consumed">1,900</span>
-                    <span class="ring-label">Left</span>
-                    <span class="calories-left">600</span>
+                        <!-- MEAL CALORIES PROGRESS SIDEBAR -->
+                
+                <div class="meal-breakdown">
+                    <div class="meal-row">
+                        <span>Breakfast</span>
+                        <span class="meal-cal">625</span>
+                    </div>
+                    <div class="meal-row">
+                        <span>Lunch</span>
+                        <span class="meal-cal">625</span>
+                    </div>
+                    <div class="meal-row">
+                        <span>Dinner</span>
+                        <span class="meal-cal">625</span>
+                    </div>
+                    <div class="meal-row">
+                        <span>Snacks</span>
+                        <span class="meal-cal">625</span>
+                    </div>
                 </div>
-            </div>
-
-    <!-- MEAL CALORIES PROGRESS SIDEBAR -->
-            
-            <div class="meal-breakdown">
-                <div class="meal-row">
-                    <span>Breakfast</span>
-                    <span class="meal-cal">625</span>
-                </div>
-                <div class="meal-row">
-                    <span>Lunch</span>
-                    <span class="meal-cal">625</span>
-                </div>
-                <div class="meal-row">
-                    <span>Dinner</span>
-                    <span class="meal-cal">625</span>
-                </div>
-                <div class="meal-row">
-                    <span>Snacks</span>
-                    <span class="meal-cal">625</span>
-                </div>
-            </div>
-
-    <!-- MACRO PROGRESS SECTION -->
+            </div>   
+                <!-- MACRO PROGRESS SECTION -->
 
             <div class="macros">
                 <div class="macro">
                     <span class="macro-label">Carbs</span>
+                    <div class="macro-bar-track">
+                        <div class="macro-bar"></div>
+                    </div>
                     <span class="macro-value">20g / 145</span>
                 </div>
                 <div class="macro">
                     <span class="macro-label">Protein</span>
+                    <div class="macro-bar-track">
+                        <div class="macro-bar"></div>
+                    </div>
                     <span class="macro-value">175g / 230g</span>
                 </div>
                 <div class="macro">
                     <span class="macro-label">Fat</span>
+                    <div class="macro-bar-track">
+                        <div class="macro-bar"></div>
+                    </div>
                     <span class="macro-value">76g / 95g</span>
                 </div>
 
@@ -112,22 +122,23 @@
         </div>
 
             <!-- FOOD SEARCH SECTION -->
-        <div class="food-search">
-            <label for="search-bar">Search Food</label>
-            <input type="text" id="search-bar"/>
+        <div class="food-search card">
+            <label for="search-bar">Search Foods</label>
+            <input type="text" id="search-bar" placeholder="(e.g., Chicken Breast, Apple, Broccoli)"/>
         </div>
 
             <!-- MEALS SECTION -->
 
+        <div class="section-title">
+            <h2>Meals</h2>
+        </div>
         <section class="meals">
-            <div class="section-title">
-                <h2>Meals</h2>
-            </div>
+            
 
     <!-- BREAKFAST -->
 
-            <div class="meal-section" id="breakfast">
-                <div class="mealheader">
+            <div class="meal-section card" id="breakfast">
+                <div class="meal-header">
                     <h3>Breakfast</h3>
                     <span class="meal-calories">0 cal</span>
                 </div>
@@ -138,8 +149,8 @@
 
     <!-- LUNCH -->
 
-            <div class="meal-section" id="lunch">
-                <div class="mealheader">
+            <div class="meal-section card" id="lunch">
+                <div class="meal-header">
                     <h3>Lunch</h3>
                     <span class="meal-calories">0 cal</span>
                 </div>
@@ -150,8 +161,8 @@
 
     <!-- DINNER -->
 
-            <div class="meal-section" id="dinner">
-                <div class="mealheader">
+            <div class="meal-section card" id="dinner">
+                <div class="meal-header">
                     <h3>Dinner</h3>
                     <span class="meal-calories">0 cal</span>
                 </div>
@@ -162,8 +173,8 @@
 
     <!-- SNACKS -->
 
-            <div class="meal-section" id="snack">
-                <div class="mealheader">
+            <div class="meal-section card" id="snack">
+                <div class="meal-header">
                     <h3>Snack</h3>
                     <span class="meal-calories">0 cal</span>
                 </div>
