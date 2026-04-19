@@ -42,6 +42,8 @@ header {
     background-color: var(--orange-accent);
     position: fixed;
     width: 100%;
+    border-bottom: 1px solid #92361f;
+    box-shadow: 0 0 8px rgba(0, 0, 0.1);
 
 
 /* adding this because I could see my input arrows though the menu */
@@ -168,6 +170,8 @@ header {
 
 
 /* THIS APPLIES TO ALL "MAIN" ON ALL PAGES */
+
+
 main {
     padding: 100px 25px 80px 25px;
     background-color: var(--blue-accent);
@@ -202,6 +206,8 @@ main {
     padding: 15px 0 5px 5px;
     font-size: 20px;
 }
+
+
 
 /* START: SECTION HERO */
 
@@ -263,7 +269,7 @@ section .hero {
 
 /* INFO SECTION  */
 
-.info {
+main .info {
     background-color: whitesmoke;
 }
 .info-title {
@@ -292,6 +298,8 @@ section .hero {
     display: block;
     border: 2px solid var(--orange-accent);
     border-radius: 12px;
+    display: block;
+    width: 100%;
 }
 
 /* The next two styles are for the text overlay on the link images */
@@ -299,6 +307,8 @@ section .hero {
 .links a {
     position: relative;
     display: block;
+    overflow: hidden;
+    border-radius: 12px;
 }
 
 .overlay-text {
@@ -458,7 +468,7 @@ input::placeholder {
     font-weight: 300;
 }
 
-/* FOOD-LOG.HTML STYLE */
+/* START FOOD-LOG.HTML STYLE */
 
 
 /* I used this to create the ring portion of the progress ring */
@@ -692,6 +702,8 @@ input::placeholder {
     justify-content: space-around;
     align-items: center;
     padding: 0 0;
+    border-top: 1px solid #92361f;
+    box-shadow: 0 0 8px rgba(0, 0, 0.1);
     
 }
 
