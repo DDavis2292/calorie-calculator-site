@@ -4,81 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caesar Salad Recipe</title>
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
-<body>  
-    <h1>Caesar Salad Recipe</h1>
-        <img src="../images/caesar-salad-image.png" alt="Image of a dish with a caesar salad inside. The salad is topped with grilled chicken, croutons, and anchovies" width="400">
-        <h2><u>Description</u></h2>
-        <section>
-            <p>A modern take on a classic Caesar salad, this dish features crisp romaine lettuce tossed in a creamy, savory Caesar dressing and topped with perfectly grilled, sliced chicken breast. Finished with freshly shaved Parmesan cheese, crunchy golden croutons, and a generous sprinkle of cracked black pepper, each bite delivers a balance of texture and bold flavor. Delicately placed anchovies on the side add a traditional, briny depth for those who appreciate the authentic Caesar experience. Presented in sleek, contemporary dishware, this salad is both elevated and satisfying.
-            </p>
-        </section>
-        <h3><u>Ingredients</u></h3>
-        <h4>For the Salad:</h4>
-        <ul>
-            <li>1 large head romaine lettuce (chopped)</li>
-            <li>1 cup croutons</li>
-            <li>1/4 cup shaved Parmesan cheese</li>
-            <li>Fresh cracked black pepper</li>
-        </ul>
-
-         <h4>For the Chicken (Optional):</h4>
-        <ul>
-            <li>2 boneless, skinless chicken breasts</li>
-            <li>1 tablespoon olive oil</li>
-            <li>Salt and pepper</li>
-        </ul>
-
-         <h4>For Garnish:</h4>
-        <ul>
-            <li>Lemon wedge (for garnish)</li>
-            <li>While anchovy fillets (for plating)</li>
-        </ul>
-
-        <h3><u>Instructions</u></h3>
-
-        
-        <h4>1. Prepare the Chicken:</h4>
-        <ul>
-            <li>Preheat grill pan or skillet over medium-high heat.</li>
-            <li>Rub chicken breasts with olive oil, salt, and pepper.</li>
-            <li>Cook for 5-6 minutes per side until fully cooked (internal temp 165 degrees fahrenheit).</li>
-            <li>Let rest, then slice into even strips.</li>
-        </ul>
-
-        <h4>2. Make the Caesar Dressing:</h4>
-        <ul>
-            <li>In a bowl, whisk together mayonnaise, lemon juice, Dijon mustard, garlic, and anchovies.</li>
-            <li>Stir in grated Parmesan and olive oil</li>
-            <li>Season with salt and pepper to taste. Adjust consistency if needed with a small splash of water.</li>
-        </ul>
-
-         <h4>3. Assemble the Salad:</h4>
-        <ul>
-            <li>In a large bowl, toss romaine lettuce with Caesar dressing until evenly coated.</li>
-            <li>Add croutons and gently mix.</li>
-        </ul>
-
-         <h4>4. Plate the Dish:</h4>
-        <ul>
-            <li>Transfer salad to serving bowl or plate.</li>
-            <li>Arrange sliced grilled chicken on top.</li>
-            <li>Sprinkle with shaved Parmesan and cracked black pepper.</li>
-            <li>Add a few anchovy fillets on the side for garnish.</li>
-            <li>Squeeze a lemon wedge over the salad (avoid letting the seeds get into the salad).</li>
-        </ul>
-
-
-
-        <p> <strong>ENJOY!</strong></p>
-
-    <ul>
-        <li><a href="../index.html">Recipes Home</a></li>
-        <li><a href="../recipes/tacos.html">Taco Recipe</a></li>
-        <li><a href="../recipes/grilled-salmon.html">Grilled Salmon Recipe</a></li>
-    </ul>
+<body> 
     
+    <header>
+        <nav class="top-nav">
+            <div class="nav-wrapper">
+
+            <!-- Logo -->
+                <a href="./" class="logo-link">
+                    <img class="logo" src="./images/husky-boy-logo.svg" width="100%" alt="Husky Boy Health logo">
+                </a>
+
+            <!-- Wordmark -->
+                <a href="./" class="wordmark-link">
+                    <img class="wordmark" src="./images/husky-boy-wordmark.svg" width="100%" alt="Husky Boy Health logo">
+                </a>
+                
+            <!-- Hamburger Menu -->
+                <button class="hamburger-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <!-- Menu for the Hamburger menu (separate from nav-wrapper) -->
+            <ul class="nav-menu">
+                <li><a href="./">Home</a></li>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="./calculator.html">Calorie Calculator</a></li>
+                <li><a href="./food-log.html">Food Log</a></li>
+                <li><a href="./activity-log.html">Activity Log</a></li>
+                <li><a href="./recipes.html">Recipes</a></li>
+                <li><a href="./about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="recipe-page">
+        <h1>Caesar Salad Recipe</h1>
+            <img src="../images/caesar-salad-image.png" alt="Image of a dish with a caesar salad inside. The salad is topped with grilled chicken, croutons, and anchovies">
+            <h2><u>Description</u></h2>
+            <section>
+                <p>A modern take on a classic Caesar salad, this dish features crisp romaine lettuce tossed in a creamy, savory Caesar dressing and topped with perfectly grilled, sliced chicken breast. Finished with freshly shaved Parmesan cheese, crunchy golden croutons, and a generous sprinkle of cracked black pepper, each bite delivers a balance of texture and bold flavor. Delicately placed anchovies on the side add a traditional, briny depth for those who appreciate the authentic Caesar experience. Presented in sleek, contemporary dishware, this salad is both elevated and satisfying.
+                </p>
+            </section>
+            <h3><u>Ingredients</u></h3>
+            <h4>For the Salad:</h4>
+            <ul>
+                <li>1 large head romaine lettuce (chopped)</li>
+                <li>1 cup croutons</li>
+                <li>1/4 cup shaved Parmesan cheese</li>
+                <li>Fresh cracked black pepper</li>
+            </ul>
+
+            <h4>For the Chicken (Optional):</h4>
+            <ul>
+                <li>2 boneless, skinless chicken breasts</li>
+                <li>1 tablespoon olive oil</li>
+                <li>Salt and pepper</li>
+            </ul>
+
+            <h4>For Garnish:</h4>
+            <ul>
+                <li>Lemon wedge (for garnish)</li>
+                <li>While anchovy fillets (for plating)</li>
+            </ul>
+
+            <h3><u>Instructions</u></h3>
+
+            
+            <h4>1. Prepare the Chicken:</h4>
+            <ul>
+                <li>Preheat grill pan or skillet over medium-high heat.</li>
+                <li>Rub chicken breasts with olive oil, salt, and pepper.</li>
+                <li>Cook for 5-6 minutes per side until fully cooked (internal temp 165 degrees fahrenheit).</li>
+                <li>Let rest, then slice into even strips.</li>
+            </ul>
+
+            <h4>2. Make the Caesar Dressing:</h4>
+            <ul>
+                <li>In a bowl, whisk together mayonnaise, lemon juice, Dijon mustard, garlic, and anchovies.</li>
+                <li>Stir in grated Parmesan and olive oil</li>
+                <li>Season with salt and pepper to taste. Adjust consistency if needed with a small splash of water.</li>
+            </ul>
+
+            <h4>3. Assemble the Salad:</h4>
+            <ul>
+                <li>In a large bowl, toss romaine lettuce with Caesar dressing until evenly coated.</li>
+                <li>Add croutons and gently mix.</li>
+            </ul>
+
+            <h4>4. Plate the Dish:</h4>
+            <ul>
+                <li>Transfer salad to serving bowl or plate.</li>
+                <li>Arrange sliced grilled chicken on top.</li>
+                <li>Sprinkle with shaved Parmesan and cracked black pepper.</li>
+                <li>Add a few anchovy fillets on the side for garnish.</li>
+                <li>Squeeze a lemon wedge over the salad (avoid letting the seeds get into the salad).</li>
+            </ul>
+
+
+
+            <p> <strong>ENJOY!</strong></p>
+
+        <ul>
+            <li><a href="./recipes.html">Recipes Home</a></li>
+            <li><a href="./tacos.html">Taco Recipe</a></li>
+            <li><a href="./grilled-salmon.html">Grilled Salmon Recipe</a></li>
+        </ul>
+    </main>
+
+
+     <!-- BOTTOM MOBILE NAV -->
+    <footer>
+        <nav class="mobile-nav">
+            <div class="dashboard-btn nav-btn">
+                <a href="./dashboard.html" >
+                    <img src="./images/nav-dash-btn.svg" alt="">
+                    <span class="nav-text">Dashboard</span>
+                </a>
+            </div>
+
+            <div class="calculator-btn nav-btn">
+                <a href="./calculator.html">
+                    <img src="./images/nav-calculator-btn.svg" alt="">
+                    <span class="nav-text">Calculator</span>
+                </a>
+            </div>
+
+            <div class="food-btn nav-btn ">
+                <a href="./food-log.html">
+                    <img src="./images/nav-food-btn.svg" alt="">
+                    <span class="nav-text">Food Log</span>
+                </a>
+            </div>
+
+            <div class="activity-btn nav-btn ">
+                <a href="./activity-log.html">
+                    <img src="./images/nav-activity-btn.svg" alt="">
+                    <span class="nav-text">Activity Log</span>
+                </a>
+            </div>
+        </nav>
+    </footer>
+    
+
+<script src="./js/main.js"></script>
     
     
 

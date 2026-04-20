@@ -731,7 +731,6 @@ input::placeholder {
     /* This was the key - it makes the image fill the container without stretching */
     object-fit: cover;
     display: block;
-    
 }
 
 .gallery-item h3 {
@@ -755,6 +754,55 @@ input::placeholder {
 }
 
 /* END RECIPES.HTML */
+
+/* THIS CONTROLS ALL INDIVIDUAL RECIPE PAGES */
+
+.recipe-page {
+    background-color: var(--cream-accent);  
+}
+
+.recipe-page img {
+    max-width: 100%;
+    height: auto;
+}
+.recipe-page h1 {
+    color: var(--blue-accent);
+    font-size: 35px;
+    font-family: Roboto, sans-serif;
+}
+
+.recipe-page h2 {
+    font-size: 30px ;
+    color: var(--orange-accent);
+    padding-top: 15px;
+    font-family: Roboto, sans-serif;
+}
+
+.recipe-page h3 {
+    padding-bottom:  5px;
+}
+.recipe-page ul {
+    list-style-type:circle;
+    padding-left: 30px;
+    padding-bottom: 15px;
+}
+
+.recipe-page a {
+    color: #006664;
+}
+
+.recipe-page p {
+    padding-bottom: 15px;
+}
+
+.recipe-page .instruction-steps {
+    padding-bottom: 5px;
+    padding-left: 15px ;
+}
+
+.instructions {
+    padding-bottom: 10px;
+}
 
 
 
@@ -826,6 +874,11 @@ active once on each page. */
     grid-template-columns: 1fr;
     grid-template-rows: 200px 200px 200px 200px;
     gap: 5px;
+
+}
+
+.gallery-item {
+    align-content: center;
 }
 
 }
