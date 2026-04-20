@@ -1,0 +1,1 @@
+This is a health website with a calorie calculator, food log, and activity log (not functional at this time). This site was build to sharpen my skills in html and css. 
