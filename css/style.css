@@ -222,13 +222,12 @@ section .hero {
     font-weight: 900;
     padding-bottom: 10px;
     font-family: Roboto, sans-serif;
-    text-align: center;
     color: var(--cream-accent);
+    text-align: center;
 }
 
 
-
-.hero-text > p {
+.hero-image > p {
     font-size: 18px;
     color: #E5E7EB;
     list-style-type: none;
@@ -236,7 +235,7 @@ section .hero {
 
 }
 
-.hero-text > button {
+.hero-image > button {
     background-color: var(--orange-accent);
     border: none;
     border-radius: 5px;
@@ -244,27 +243,32 @@ section .hero {
     padding: 3px 15px;
     font-family: Roboto, sans-serif;
     color: white;
+    width: 125px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .hero {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 60px 0;
-    gap: 50px;
+    gap: 5px;
     
+}
+
+.hero-image {
+    text-align: center;
 }
 
 .hero-image img {
     width: 100%;
     max-width: 500px ;
     height: auto;
-}
+    justify-self: center;
 
-.hero-image, .hero-text {
-    flex: 1;
-    
 }
 
 /* END: SECTION HERO */
@@ -292,18 +296,10 @@ main .info {
 
 .links-wrapper {
     display: grid;
-    /* justify-content: center; */
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
-
-/* .links-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding-bottom: 30px;
-} */
 
 .links {
     font-size: 12px;
@@ -317,14 +313,6 @@ main .info {
     display: block;
 }
 
-/* .links img {
-    width: 100%;
-    display: block;
-    border: 2px solid var(--orange-accent);
-    border-radius: 12px;
-    display: block;
-    width: 100%;
-} */
 
 /* The next two styles are for the text overlay on the link images */
 
@@ -334,12 +322,6 @@ main .info {
     overflow: hidden;
 }
 
-/* .links a {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    border-radius: 12px;
-} */
 
 .overlay-text {
     position: absolute;
@@ -823,6 +805,20 @@ active once on each page. */
 /* TABLET VIEW */
 @media(min-width: 768px) {
 
+/* INDEX SECTION */
+
+/* hero */
+
+
+
+/* info */
+.links-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
 
     /* RECIPE SECTION */
 .gallery-container {
@@ -834,47 +830,34 @@ active once on each page. */
 
 }
 
+
+
 /* DESKTOP VIEW */
 @media(min-width: 1024px) {
 
-footer .mobile-nav {
-    display: none;
+/* INDEX SECTION */
+
+
+/* info */
+.links-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
 }
+
+
 
     /* START: SECTION HERO */
 
-section .hero {
-    
-    background-color: #1F2937;
-    color: #F9FaF8;
-    padding: 0 100px;
-}
+
 .hero-text h1 {
-    font-size: 48px;
-    font-weight: 900;
-    padding-bottom: 10px;
+    font-size: 75px;
 }
 
-
-.hero-text > p {
-    font-size: 18px;
-    color: #E5E7EB;
-    list-style-type: none;
-
-}
-
-.hero-text > button {
-    background-color: var(--orange-accent);
-    border: none;
-    border-radius: 5px;
-    margin-top: 8px;
-    padding: 3px 15px;
-    font-family: Roboto, sans-serif;
-    color: white;
-}
 
 .hero {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 60px 0;
@@ -882,15 +865,15 @@ section .hero {
     
 }
 
-.hero-image img {
-    width: 100%;
-    max-width: 500px ;
-    height: auto;
-}
-
-.hero-image, .hero-text {
+.hero-text, .hero-image {
     flex: 1;
 }
+
+.hero-image {
+    justify-content: center;
+}
+
+
     
 /* RECIPES SECITON */
 .gallery-container {
@@ -901,7 +884,10 @@ section .hero {
 }
 
 
-
+/* MOBILE NAV */
+footer .mobile-nav {
+    display: none;
+}
 
 
 }
