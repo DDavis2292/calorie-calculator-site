@@ -1087,6 +1087,7 @@ input::placeholder {
     font-size: 14px; 
 }
 
+
 /* Have to add "active" to each html page link. only can have 
 active once on each page. */
 .mobile-nav a.active {
@@ -1103,6 +1104,20 @@ active once on each page. */
     border-left: 1.5px solid var(--blue-nav-accent);
     flex: 1;
 }
+
+.main-footer {
+    height: 75px;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rubik Bubbles';
+    background-color: var(--orange-accent);
+    color: var(--cream-accent);
+    font-size: 20px;
+}
+
+
 
 /* TABLET VIEW */
 @media(min-width: 768px) {
@@ -1135,6 +1150,8 @@ active once on each page. */
     align-content: center;
 }
 
+
+
 }
 
 
@@ -1152,10 +1169,7 @@ active once on each page. */
     grid-template-rows: auto;
 }
 
-
-
-    /* START: SECTION HERO */
-
+/* START: SECTION HERO */
 
 .hero-text h1 {
     font-size: 75px;
@@ -1196,8 +1210,15 @@ footer .mobile-nav {
     display: none;
 }
 
+/* Main footer, not mobile nav */
+
+.main-footer {
+    display: flex;
+}
+
 
 }
+
 
 
 
