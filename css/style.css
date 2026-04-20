@@ -493,6 +493,12 @@ input::placeholder {
     font-weight: 300;
 }
 
+/* END CALCULATOR.HTML STYLE */
+
+
+
+
+
 /* START FOOD-LOG.HTML STYLE */
 
 
@@ -710,9 +716,227 @@ input::placeholder {
     height: 40px;
 }
 
+/* END FOOD-LOG.HTML STYLE */
 
 
-/* START RECIPES.HTML */
+/* START ACTIVITY-LOG.HTML STYLE */
+
+
+
+/* activity buttons */
+.activity-actions {
+    padding: 20px 0;
+    display: flex;
+    gap: 15px;
+    
+}
+
+.activity-actions button {
+    display: flex;
+    background-color: var(--orange-accent);
+    border: none;
+    border-radius: 8px;
+    height: 45px;
+    color: var(--cream-accent);
+    padding: 15px 20px;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* My routines section */
+
+
+.routines {
+    font-family: Roboto, sans-serif;
+}
+
+.routine-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.routines h2 {
+    font-size: 25px;
+    color: var(--cream-accent);
+    padding-bottom: 15px;
+    padding-left: 5px;
+}
+
+.workouts {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background-color: var(--card-black);
+    border: 1px solid var(--input-black);
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 20px;
+}
+
+.workout-type {
+    display: flex;
+    justify-content: space-between;
+    color: whitesmoke;
+}
+
+.workout-title {
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 15px;
+}
+
+.workout-type p {
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.start-button {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.start-routine {
+    background-color: var(--orange-accent);
+    width: 30%;
+    height: auto;
+    border: none;
+    border-radius: 100px;
+    color: var(--cream-accent);
+    font-size: 12px;
+    font-weight: bold;
+    text-wrap: nowrap;
+    padding: 5px 10px;
+    
+}
+
+/* Activity summary */
+
+.todays-activity {
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto, sans-serif;
+    padding: 20px 0;
+    gap: 10px;
+}
+
+.todays-activity h2 {
+    font-size: 25px;
+    color: var(--cream-accent);
+    padding-bottom: 15px;
+    padding-left: 5px;
+    
+}
+
+.activity-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    padding: 15px;
+    background-color: var(--card-black);
+    border: 1px solid var(--input-black);
+}
+
+.activity-header {
+    display: flex;
+    padding-bottom: 5px;
+    font-weight: bold;
+    justify-content: space-between;
+
+}
+
+.activity-name { 
+    color: whitesmoke;
+}
+
+.activity-status {
+    color: #4caf50;
+    
+}
+
+.exercise-table th {
+    
+    text-decoration: underline;
+    color: var(--orange-accent);
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.exercise-table td {
+    color: whitesmoke;
+    font-weight: 300;
+    font-size: 13px;
+    text-align: center;
+}
+
+.exercise-table .first-column {
+    text-align: left;
+}
+
+
+                /* quick exercise guide table section */
+
+.common-exercises h2 {
+    font-size: 25px;
+    color: var(--cream-accent);
+    padding-bottom: 5px;
+    padding-left: 3px;
+    font-family: Roboto, sans-serif;
+}
+
+.common-exercises p {
+    color: var(--cream-accent);
+    padding-bottom: px;
+    padding-left: 3px;
+    font-family: Roboto, sans-serif;
+    text-align: left;
+    font-size: 15px;
+}
+.quick-guide {
+    background-color: whitesmoke;
+    width: 100%;
+    border-spacing: 2px;
+    border-collapse: collapse;
+    border: 3px solid var(--card-black);
+
+}
+.quick-guide th {
+    background-color: var(--orange-accent);
+    color: var(--cream-accent);
+    text-align: left;
+    padding: 4px;
+}
+
+.quick-guide td {
+    padding: 2px 2px 2px 4px;
+}
+
+.quick-guide tr:nth-child(even) {
+    background-color: white;
+}
+
+.quick-guide td, .quick-guide th {
+    border: 1px solid rgb(186, 186, 186);
+}
+
+
+
+
+
+
+                    /* END ACTIVITY-LOG.HTML STYLE */
+
+
+                    /* START RECIPES.HTML STYLE */
 
 .gallery-item {
     overflow: hidden;

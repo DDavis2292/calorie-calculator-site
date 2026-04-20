@@ -64,6 +64,75 @@
             <h2>My Routines</h2>
             <div class="routine-list" id="routine-list">
 
+
+                <div class="workout-1 workouts">
+
+
+                    <div class="workout-type">
+                        <h3 class="workout-title">Arms, Shoulders, Chest, Back</h3>
+                        <p>...</p>
+                    </div>
+
+
+                    <div class="start-button">
+                        <button class="start-routine">Start Routine</button>
+                    </div>
+
+
+                </div>
+
+                
+                <div class="workout-2 workouts">
+
+
+                    <div class="workout-type">
+                        <h3 class="workout-title">Leg Day</h3>
+                        <p>...</p>
+                    </div>
+
+
+                    <div class="start-button">
+                        <button class="start-routine">Start Routine</button>
+                    </div>
+
+
+                </div>
+
+
+                <div class="workout-3 workouts">
+
+
+                    <div class="workout-type">
+                        <h3 class="workout-title">Bench Press</h3>
+                        <p>...</p>
+                    </div>
+
+
+                    <div class="start-button">
+                        <button class="start-routine">Start Routine</button>
+                    </div>
+
+
+                </div>
+
+
+                <div class="workout-4 workouts">
+
+
+                    <div class="workout-type">
+                        <h3 class="workout-title">Cardio</h3>
+                        <p>...</p>
+                    </div>
+
+
+                    <div class="start-button">
+                        <button class="start-routine">Start Routine</button>
+                    </div>
+
+
+                </div>
+
+
                 <!-- This is where the logged routines should populate -->
 
             </div>
@@ -72,21 +141,32 @@
 <!-- SUMMARY OF ACTIVITIES THAT HAVE BEEN COMPLETED FOR THE DAY -->
         <section class="todays-activity">
             <h2>Today's Activity</h2>
+
+
             <div class="activity-card" id="activity-log">
                 <div class="activity-header">
-                    <span class="activity-name"></span>
-                    <span class="activity-status"></span>
+                    <span class="activity-name">Bench Press</span>
+                    <span class="activity-status">Completed</span>
                 </div>
+                <hr>
                 <table class="exercise-table">
                     <thead>
                         <tr>
-                            <th>Exercise</th>
-                            <th>Set</th>
-                            <th>Lbs</th>
+                            <th class="first-column">Movements</th>
+                            <th>Sets</th>
                             <th>Reps</th>
+                            <th>Lbs</th>
                         </tr>
+
                     </thead>
                     <tbody id="exercise-rows">
+                        <tr class="bench-press">
+                            <td class="first-column">Free Weight Bench Press</td>
+                            <td>3</td>
+                            <td>8</td>
+                            <td>210</td>
+
+                        </tr>
 
                         <!-- This is where the exercise should populate -->
 
@@ -95,15 +175,54 @@
 
             </div>
 
+
+            <div class="activity-card" id="activity-log">
+                <div class="activity-header">
+                    <span class="activity-name">Cardio</span>
+                    <span class="activity-status">Completed</span>
+                </div>
+                <hr>
+                <table class="exercise-table">
+                    <thead>
+                        <tr>
+                            <th class="first-column">Movements</th>
+                            <th>Duration</th>
+                            <th>Distance</th>
+                            <th>Speed</th>
+                        </tr>
+
+                    </thead>
+                    <tbody id="exercise-rows">
+                        <tr class="bike">
+                            <td class="first-column">Exercise Bike</td>
+                            <td>45 min</td>
+                            <td>15 miles</td>
+                            <td>20 mph</td>
+                        </tr>
+
+                        <tr class="treadmill">
+                            <td class="first-column">Exercise Bike</td>
+                            <td>20 min</td>
+                            <td>2 miles</td>
+                            <td>6 mph</td>
+                        </tr>
+
+                        <!-- This is where the exercise should populate -->
+                    </tbody>
+                </table>
+
+            </div>
+
         </section>
         <section class="common-exercises">
             <h2>Quick Calorie Burning Guide</h2>
+            <p>Calories Burned from Common Exercises:</p>
 
             <table class="quick-guide">
-                <caption>Calories Burned from Common Exercises:</caption>
+                
                 <thead>
                     <tr>
-                        <th>Activity(1hours)</th>
+                        <th>Activity(1 hours)</th>
                         <th>125 lb person</th>
                         <th>155 lb person</th>
                         <th>185 lb person</th>
